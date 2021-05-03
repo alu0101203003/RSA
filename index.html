@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Encriptador snow_aes</title>
+  <link rel="stylesheet" href="rsa/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Red Rose' rel='stylesheet'>
+</head>
+
+<body>
+  <script src='rsa/rsa.js'></script>
+
+  <div class="titulo">
+    <h1>
+      CIFRADO RSA
+    </h1>
+    <br>
+  </div>
+
+  <!-- tocar .datos en el css para la posicion de la entrada-->
+  <div class="datos">
+    <form autocomplete="on">
+      <p>
+      p: <br><input id="p" type="text"/>
+      <br>
+      q: <br><input id="q" type="text"/>
+      <br>
+      d: <br><input id="d" type="text"/>
+      <br>
+      Texto Original: <br><input id="m" type="text"/>
+      <br>
+      <br>
+      </p>
+    </form>
+  </div>
+
+  <!-- tocar .btn en el css para la posicion del candado -->
+  <div class="btn">
+    <label class="switch">
+      <input type="checkbox" id="candado" onclick="generar()">
+      <div class="slider slider--0">🔐</div>
+      <div class="slider slider--1">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="slider slider--2"></div>
+      <div class="slider slider--3">🔓</div>
+    </label>
+  </div>
+
+  <div id="salida" class="salida">
+    <h4> 
+      Resultados:
+      <h5 id="s_salida"></h5>
+    </h4>
+  </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,260 @@
+body{
+    background-color:black;
+    background-image: linear-gradient(70deg,rgba(252, 179, 23, 0.8),rgba(240, 86, 65, 0.8)),url(src/bg.png);
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #e8e8e8;
+}
+
+.titulo{
+    font-family: 'Red Rose';
+    font-size: 25px;
+    color: #ffffff;
+    position: absolute;
+    top: 0px;
+    background-color: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+    -webkit-animation: glowTitulo 1.5s ease-in-out infinite alternate;
+    -moz-animation: glowTitulo 1.5s ease-in-out infinite alternate;    
+}
+
+@keyframes glowTitulo {
+    from {
+    text-shadow:  0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ce704b, 0 0    40px #ce704b, 0 0 50px #ce704b, 0 0 60px #ce704b, 0 0 70px #ce704b;
+    }
+    to {
+    text-shadow:  0 0 20px #ce704b, 0 0 30px #ce704b, 0 0 40px #ce704b, 0 0 50px #ce704b, 0 0 60px #ce704b, 0 0 70px #ce704b, 0 0 80px #ce704b;
+    }
+}
+p{
+    font-family: 'Red Rose';
+    font-size: 25px;
+    color: #c98b68;
+    
+}
+
+
+
+#ID {
+    width: 20px;
+    background-color: #ce704b;
+}
+#LonSalida {
+    width: 20px;
+    background-color: #ce704b;
+}
+.datos{
+    width: 400px;
+    position: absolute;
+    background: none;
+    /*color: #fff;*/
+    background-color: #2e2e2e;
+    padding: 5px 50px;
+    border: 5px solid rgba(33, 18, 18, .5);;
+    border-radius: 15px;
+    left: 50px;
+    top: 170px;
+    opacity: 1;
+        
+}
+
+#clave, #texto{
+    font-family: 'Red Rose';
+    font-size: 25px;
+    color: #000000;
+}
+
+h4 {
+    font-family: 'Red Rose';
+    color: #c98b68;
+}
+input {
+    width: 200px;
+    font-family: 'Red Rose';
+    font-size: 22px;
+    padding: 7px 9px;
+    border: 5px solid #ce704b;
+    border-radius: 5px;
+}
+
+h3 {
+    font-family: 'Red Rose';
+    color: #3d3d3d;
+    font-size: 22px;
+    position: relative;
+    left: 360px;
+    top: 120px;
+}
+
+h5 {
+    font-family: 'Red Rose';
+    color: #ffffff;
+    font-size: 25px;
+    background-color: #ce704b;
+    padding: 5px 2px;
+    position: relative;
+    left: -40px;
+    width: 580px;
+    border: 5px solid #ce704b;
+    border-radius: 5px;
+}
+.salida{
+    display: none;
+    height: 460px;
+    width: 520px;
+    position: relative;
+    background: none;
+    /*color: #fff;*/
+    background-color: #2e2e2e;
+    padding: 5px 50px;
+    border: 5px solid rgba(33, 18, 18, .5);
+    border-radius: 15px;
+    left: 60px;
+    top: 90px;
+    opacity: 1;
+}
+
+
+/* A partir de aquí va el candado*/
+
+.btn {
+    position: relative;
+    left: 50px;
+    top: 0px;
+    opacity: 1;   
+}
+
+
+.btn :hover{
+    opacity: 1;
+    background-color: linear-gradient(rgb(0,0,0,0.3))
+}
+
+.switch {
+    left: -320;
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border: 2px solid #dcdcdc;
+	background: #e0e0e0;
+	box-shadow: 7px 7px 23px #bebebe, -7px -7px 23px #ffffff;
+	overflow: hidden;
+	border-radius: 60px;
+    
+    -webkit-animation: glow 4s ease-in-out infinite alternate;
+    -moz-animation: glow 4s ease-in-out infinite alternate; 
+}
+
+@keyframes glow {
+    from {
+    box-shadow:  0 0 1px #fff, 0 0 2px #fff, 0 0 3px #e6d700, 0 0    4px #e6d700, 0 0 5px #e6d700, 0 0 6px #e6d700, 0 0 7px #e6d700;
+    }
+    to {
+    box-shadow:  0 0 14px #fff, 0 0 13px #e6d700, 0 0 14px #e6d700, 0 0 15px #e6d700, 0 0 16px #e6d700, 0 0 17px #e6d700, 0 0 18px #e6d700;
+    }
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+input:checked + .slider:before {
+	background: white;
+	box-shadow: none;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+.slider {
+	color: #9a9a9a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.slider--0 {
+	color: white;
+	font-weight: 600;
+	background-color: #ce704b;
+}
+
+.slider--1 div {
+	transition: 0.5s;
+}
+
+.slider--1 div {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	left: 0;
+}
+
+input:checked ~ .slider--1 div:first-child {
+	transform: translateY(-100%);
+	transition-delay: 1s;
+}
+
+input:checked ~ .slider--1 div:last-child {
+	transform: translateY(100%);
+	transition-delay: 1s;
+}
+
+input:checked ~ .slider--2 {
+	transform: translateX(100%);
+	transition-delay: 0.5s;
+}
+
+input:checked ~ .slider--3 {
+	transform: translateX(-100%);
+	transition-delay: 0s;
+}
+
+.slider--1 div:first-child {
+	transform: translateY(0);
+	top: 0;
+	background-color: #f3f3f3;
+	transition-delay: 0s;
+}
+
+.slider--1 div:last-child {
+	transform: translateY(0);
+	bottom: 0;
+	background-color: #f3f3f3;
+	border-top: 1px solid #e0e0e0;
+	transition-delay: 0s;
+}
+
+.slider--2 {
+	background-color: #e6e6e6;
+	transition-delay: 0.5s;
+	transform: translateX(0);
+	border-left: 1px solid #d2d2d2;
+}
+
+.slider--3 {
+	background-color: #d2d2d2;
+	transition-delay: 1s;
+	transform: translatex(0);
+	border-right: 1px solid #d2d2d2;
+}
+
+/* Acaba el candado*/
